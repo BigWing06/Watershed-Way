@@ -1,6 +1,3 @@
 res://default_env.tres
 res://mainScene.tscn
-res://gameOverMenu.gd
 res://gameOverMenu.tscn
-res://mainScene.gd
-res://input.gd
