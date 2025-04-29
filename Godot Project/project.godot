@@ -19,12 +19,12 @@ config/icon="res://icon.png"
 
 GlobalInput="*res://input.gd"
 Global="*res://global.gd"
+TcpServer="*res://tcp_server.gd"
 
 [display]
 
 window/size/viewport_width=2160
 window/size/viewport_height=3840
-window/size/mode=3
 window/size/window_width_override=360
 window/size/window_height_override=640
 window/stretch/mode="viewport"
