@@ -1,6 +1,7 @@
 import socket
 import time
-import atexit   
+import atexit
+import keyboard
 
 SERVER_IP = "127.0.0.1"
 SERVER_PORT = 2222
@@ -17,16 +18,15 @@ while True:
         print("Connection Failed: Retyring in 1 second")
         time.sleep(1)
 
-def sendMessage(pin):
-        message = pin + "\n"
-        print(message)
+def sendMessage(event):
+    if event.name == "a":
+        message = "pin4broken"
         sock.sendall(message.encode())
         time.sleep(POLL_DELAY)
         
 def onExit():
     sock.close()
 
+keyboard.on_release(sendMessage)
 atexit.register(onExit)
-while True:
-    if input("CMD: ") == " ":
-        sendMessage(input("Num"))
+keyboard.wait()
