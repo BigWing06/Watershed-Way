@@ -203,3 +203,4 @@ sprite_frames = SubResource("7")
 animation = &"background1"
 
 [node name="gameOverMenu" parent="." instance=ExtResource("9")]
+visible = false
